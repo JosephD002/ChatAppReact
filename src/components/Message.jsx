@@ -9,6 +9,7 @@ const Message = ({message}) => {
     const newUser =message.uid;
     newStyle = user ===  newUser ? 'my-message' : ' message';
    }
+   
 
 
   return (
@@ -21,9 +22,10 @@ const Message = ({message}) => {
         <p className='text'>{message.text}</p>
 
         </div>
+        <p className='time'>{formatDate(message.timestamp)}</p>
 
       </div>
-
+      <img src={message.photo} alt='user photo' referrerPolicy='no-referrer'/>
     </article>
       
       
