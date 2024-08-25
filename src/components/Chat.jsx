@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {auth, db } from '../firebase';
 import {query, collection,  orderBy, onSnapshot, Timestamp} from 'firebase/firestore';
 import Message from './Message';
+import SendMessage from './SendMessage';
 const Chat = () => {
   const [message,setMessage] = useState([])
 
@@ -19,7 +20,7 @@ const Chat = () => {
        setMessage(currentMessages)
     })
     return unsuscribe
-  })
+  },[])
   return (
      <section className='chat-content'>
       {
@@ -29,7 +30,7 @@ const Chat = () => {
       ))
 
       }
-    
+      <SendMessage/>
      </section>
   )
 }

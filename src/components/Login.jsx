@@ -8,9 +8,7 @@ const Login = () => {
 
   
 
-  const [user]= useAuthState(auth);
-    console.log(user);
-  
+ 
   
 
   const googleLogin = () => {
