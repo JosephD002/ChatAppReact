@@ -1,6 +1,6 @@
 import React from 'react'
 import { auth } from '../firebase';
-
+import { formatDate } from './helpers';
 const Message = ({message}) => {
 
    let newStyle = 'message' ; 
